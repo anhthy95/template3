@@ -1,0 +1,47 @@
+/* Simple dashboard grid CSS */
+
+/* Assign grid instructions to our parent grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: auto 1fr 50px;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main"
+    "sidenav footer";
+  height: 100vh;
+}
+
+/* Give every child element its grid name */
+.header {
+  grid-area: header;
+  background-color: GoldenRod;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border-style: solid;
+  border-color: black;
+  border-width: thick;
+}
+
+.sidenav {
+  grid-area: sidenav;
+  background-color: #000000;
+}
+
+.main {
+  grid-area: main;
+  background-color: GoldenRod;
+  background-size: 100% 100%; 
+  background-image: url('BoldBuffBackground.jpeg');
+  display: flex;
+  justify-content: space-between;
+  margin: 0vw;
+  padding: 2vw;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #GoldenRod;
+}
